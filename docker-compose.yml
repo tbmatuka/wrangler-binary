@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+    nodejs:
+        build:
+            context: ./.docker-config/
+            dockerfile: ./Dockerfile-nodejs-linux
+            args:
+                www_data_uid: "$DOCKER_UID"
+                www_data_gid: "$DOCKER_GID"
+        volumes:
+            - '.:/app'
+            - './.docker-data/nodejs:/var/www/nvm-volume'
+        environment:
+            TERM: '$TERM'
+        command: ['pkg', '.']

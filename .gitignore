@@ -1,0 +1,18 @@
+npm-debug.log
+yarn-error.log
+
+/.idea/
+
+# docker
+/.docker-data/*
+
+# keep this to solve the permission issue until a proper fix is available
+!/.docker-data/*
+/.docker-data/*/*
+!/.docker-data/*/.gitkeep
+
+# Node
+node_modules/
+
+# Static site
+/dist/

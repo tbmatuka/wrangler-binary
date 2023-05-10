@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "pkg": "^5.8.1",
+    "wrangler": "^2.20.0"
+  },
+  "pkg": {
+    "scripts": "node_modules/wrangler/wrangler-dist/cli.js",
+    "assets": [
+      "node_modules/blake3-wasm/dist/wasm/nodejs/blake3_js_bg.wasm"
+    ],
+    "targets": [ "latest-linux-x64" ],
+    "outputPath": "dist/"
+  }
+}
